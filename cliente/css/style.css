@@ -1,0 +1,140 @@
+body{
+  background: url('../img/fondo.jpg') no-repeat;
+  background-size: cover;
+  min-height: 650px;
+  position: relative;
+}
+
+.logo {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.mynav {
+  background: url("../img/ladrillito.jpg")
+}
+
+.titulo {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+  color: white;
+  text-decoration: underline;
+}
+
+
+.foot-font {
+  margin-top: 10px;
+  color: white;
+}
+
+.foot-img {
+  width: 100px;
+}
+.color-fondo{
+      min-height: 650px;
+}
+
+.descripcion {
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+}
+
+.foot{
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  border: 1px solid rgba(68, 68, 68, 0.555);
+}
+
+.list {
+  list-style-type: circle !important;
+  margin-left: 50px;
+}
+
+.recuadro {
+  border: 1px solid;
+  border-radius: 60px;
+  background-color: rgba(0, 0, 0, 0.71);
+  color: white;
+}
+.form-title {
+  border: 1px solid;
+  background-color: white;
+  color: black;
+  margin-top: 50px;
+  padding: 15px !important;
+
+  font-size: 30px;
+
+}
+
+.form-box {
+  border: 1px solid;
+  background-color: rgba(0, 0, 0, 0.71);
+  color: white;
+  padding: 20px !important;
+}
+
+.form-button:enabled {
+  background-color: #ff5b0aa8;
+  text-transform: uppercase;
+  color: #fff;
+  border: 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  padding: 10px 30px;
+  border-radius: 60px;
+  outline: none !important;
+  text-align: center;
+  cursor: pointer;
+}
+
+.form-button:disabled {
+  background-color: #ab755ba8;
+  text-transform: uppercase;
+  color: #fff;
+  border: 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  padding: 10px 30px;
+  border-radius: 60px;
+  outline: none !important;
+  text-align: center;
+  cursor: pointer;
+}
+
+.form-font {
+  color:white;
+}
+.contenido {
+  margin-bottom: 50px;
+}
+
+.mybtnfont{
+  color: #fff !important;
+}
+
+.mybtn {
+  background-color: #ff5b0aa8;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff !important;
+  border: 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  padding: 10px 30px;
+  border-radius: 60px;
+  outline: none !important;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.output{
+  color: #ff6559bf;
+}
