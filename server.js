@@ -62,7 +62,7 @@ app.get('/Contacto',function(req, res) {
 });
 
 app.get('/content',auth,function(req, res) {
-    res.sendFile(path.join(__dirname, 'cliente/Content.html'));
+    res.sendFile(path.join(__dirname, 'cliente/contenido.html'));
 });
 
 app.post('/LogIn', function(req, res) {

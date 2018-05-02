@@ -245,3 +245,8 @@ ul.social {
 .white-text:hover{
   background-color: #86868663;
 }
+
+.working{
+  width: 100%;
+  height: 500px;
+}
