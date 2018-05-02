@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title> E-Rario </title>
+  <link rel="icon" href="img/logo.ico" type="image/x-icon">
+ </head>
+
+  <body>
+
+
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+
+      		<a id="logo-header" href="/">
+			<span class="site-name">E-RARIO</span>
+		</a> <!-- / #logo-header -->
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+      <ul class="right hide-on-med-and-down">
+         <ul id="dropdown1" class="dropdown-content">
+              <li><a class="desplegable" href="https://uyaull-e0414.firebaseapp.com/">Chat</a></li>
+              <li class="divider"></li>
+              <li><a class="desplegable" href="/Contacto">Otras formas</a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+                <li><a href="/">Portada</a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Contacto<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="cerrar" href="/LogIn-Up">Acceder</a></li>
+    </ul>
+
+      </ul>
+
+      <ul class="side-nav" id="mobile-demo">
+        <ul id="dropdown2" class="dropdown-content">
+              <li><a class="desplegable" href="https://uyaull-e0414.firebaseapp.com/">Chat</a></li>
+              <li class="divider"></li>
+              <li><a class="desplegable" href="/Contacto">Otras formas</a></li>
+        </ul>
+
+            <li><a href="Precios.html">Portada</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Contacto<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="cerrar" href="/LogIn-Up">Acceder</a></li>
+      <!-- Dropdown Trigger -->
+    </ul>
+
+    </div>
+      </nav>
+    </header>
+
+    <div class="color-fondo">
+
+      <div class="container">
+
+
+        <div class="row">
+          <div class="col s12 m8 l4">
+            <div class="row">
+              <div class="form-title col s12 center-align">
+                Registrar
+              </div>
+            </div>
+            <div class="form-box s12">
+
+              <form class="" action="/Registrar" method="post">
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="reg_user" class="form-font" name="form_user" placeholder="Usuario" type="text" class="validate">
+                    <label for="reg_user">Usuario:</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="reg_email" class="form-font" name="form_email" placeholder="micorreo@email.com" type="email" class="validate">
+                    <label for="reg_email">Email:</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="reg_pass" class="form-font" name="form_password" placeholder="**********" type="password" class="validate">
+                    <label for="reg_pass">Contraseña:</label>
+                  </div>
+                </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                    <input id="reg_pass_v2" class="form-font" placeholder="**********" type="password" class="validate" onchange="validate()">
+                    <label for="reg_pass_v2">Repetir Contraseña:</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <span id="reg_error" class="output"> </span>
+                </div>
+              </div>
+                <div class="row">
+                  <div class="col s8 offset-s4">
+                    <button id="btn_reg" class="form-button rigth" type="submit" disabled>Registrar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class= "col s12 m8 l4 offset-l2 offset-m2">
+            <div class="row">
+              <div class="form-title col s12 center-align">
+                Login
+              </div>
+            </div>
+            <div class="form-box col s12">
+              <form class="" action="/LogIn" method="post">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input class="form-font" name="log_form_email" class="form-font" placeholder="Email" id="log_email" type="email" class="validate">
+                    <label for="log_email">Email:</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input class="form-font" name="log_form_pass" placeholder="**********" id="log_pass" type="password" class="validate">
+                    <label for="log_pass">Contraseña:</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s8 offset-s4">
+                    <button type="submit" class="form-button rigth">Log-In</button>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="page-footer">
+                 <h1 align="center">E-RARIO</h1>
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5><a class="white-text" href="/Contacto">Contáctanos:</a></h5>
+                <p class="grey-text text-lighten-4">Dirección: C/ Avenida Marítima, nº14</p>
+                <p class="grey-text text-lighten-4">Teléfono: 922 50 52 44</p>
+                <p class="grey-text text-lighten-4">Email: E-rario_@gmail.com</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Redes sociales</h5>
+                <ul class="social">
+                 <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/e-rario/" class="insta" title="Instagram" data-aos="fade-up" data-aos-delay="20"><i class="fa fa-instagram"></i></a></li>
+                 <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/e-rario/" class="face" title="Facebook" data-aos="fade-up" data-aos-delay="40"><i class="fa fa-facebook"></i></a></li>
+                 <li><a class="grey-text text-lighten-3" href="https://twitter.com/e-rario" class="twit" title="Twitter" data-aos="fade-up" data-aos-delay="60"><i class="fa fa-twitter"></i></a></li>
+                 <li><a class="grey-text text-lighten-3" href="#" class="google" title="Google +" data-aos="fade-up" data-aos-delay="80"><i class="fa fa-google-plus"></i></a></li>
+                 <li><a class="grey-text text-lighten-3" href="#" class="linkedin" title="Linkedin" data-aos="fade-up" data-aos-delay="100"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright Text
+            </div>
+          </div>
+        </footer>
+
+
+    		<script>
+$(".button-collapse").sideNav();
+</script>
+  </body>
+
+</html>

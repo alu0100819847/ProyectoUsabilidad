@@ -1,60 +1,91 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="css/style.css"/>
-    <link rel="icon" href="img/logo.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title> E-Rario </title>
-
-  </head>
+ <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title> E-Rario </title>
+  <link rel="icon" href="img/logo.ico" type="image/x-icon">
+ </head>
 
   <body>
-    <div class="color-fondo">
-      <nav class="mynav">
+
+    <header>
+      <nav>
         <div class="nav-wrapper">
-          <a href="#!" class="left brand-logo" id="logo-container">
-            <img src="./img/logo2.png" class= "logo"></img>
-          </a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="#"><strong>Contacto</strong></a></li>
-            <li><a href="LogIn-Out"><strong>Log-in/Registrar</strong></a></li>
+
+        <a id="logo-header"href="/">
+          <span class="site-name">E-RARIO</span>
+        </a>
+        <!-- / #logo-header -->
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        <ul class="right hide-on-med-and-down">
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a class="desplegable" href="https://uyaull-e0414.firebaseapp.com/">Chat</a></li>
+            <li class="divider"></li>
+            <li><a class="desplegable" href="contacto.html">Otras formas</a></li>
           </ul>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="/">Portada</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Contacto<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="cerrar" href="/LogIn-Up">Acceder</a></li>
+          </ul>
+
+        </ul>
+
+        <ul class="side-nav" id="mobile-demo">
+          <ul id="dropdown2" class="dropdown-content">
+                <li><a class="desplegable" href="https://uyaull-e0414.firebaseapp.com/">Chat</a></li>
+                <li class="divider"></li>
+                <li><a class="desplegable" href="/Contacto">Otras formas</a></li>
+          </ul>
+
+          <li><a href="index.html">Portada</a></li>
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Contacto<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a class="cerrar" href="/LogIn-Up">Acceder</a></li>
+        <!-- Dropdown Trigger -->
+        </ul>
+
         </div>
       </nav>
+    </header>
+
+
+    <div class="color-fondo">
       <div class="container">
       <section>
         <div class="row">
-          <div class="col s12">
-            <h2 class="titulo center-align">E-RARIO </h2>
-          </div>
+            <h2 class="titulo center-align">¿Qué podemos hacer? </h2>
         </div>
         <div class="row">
           <div class="col s12 l8 center-align offset-l2">
-            <p class="descripcion"> E-Rario te permite organizar tus semanas de una forma sencilla y rapida </p>
+            <p class="descripcion">E-rario es una aplicación que permite organizar todas tus actividades del día a día, haciendote la vida mas sencilla.</p>
           </div>
         </div>
       </section>
 
       <section>
         <div class="row">
-          <div class="col s-12 l5  recuadro">
+          <div class="col s6 l5  recuadro offset-s3">
             <div class="subtitulo">
               <h3 class="">Herramientas </h3>
             </div>
             <div class="contenido">
-                <ul>
-                  <li class="list"><em> Calendario. </em></li>
-                  <li class="list"><em> Aviso de evento proximo. </em></li>
-                  <li class="list"><em> Alarma programable. </em></li>
-                  <li class="list"><em> Notas. </em></li>
-                </ul>
+              <ul>
+                <li class="list"><em> Calendario. </em></li>
+                <li class="list"><em> Aviso de evento proximo. </em></li>
+                <li class="list"><em> Alarma programable. </em></li>
+                <li class="list"><em> Notas. </em></li>
+              </ul>
             </div>
           </div>
 
-          <div class="col s-12 l5  recuadro offset-l2">
+          <div class="col s6 l5  recuadro offset-l2 offset-s3">
             <div class="subtitulo">
               <h3 class="">Funciones </h3>
             </div>
@@ -70,8 +101,8 @@
 
         </div>
           <div class="row">
-            <div class ="col s6 l2 offset-l5">
-              <div rol="tab" ><a href="Form.html" class="mybtn">Registrar</a></div>
+            <div class ="col s2 l2 offset-l5 offset-s5" id="button-div">
+              <a class="waves-effect waves-light btn" id="registrar" href="Login.html">REGISTRAR</a>
             </div>
           </div>
 
@@ -80,26 +111,37 @@
       </div>
 
     </div>
-    <div class="footer-copyright foot">
-        <div class="row">
-          <div class= "col s3">
-            <img class="left foot-img" src="img/ull-icon.png"></img>
-          </div>
-          <div class= "col s2">
-            <a class="right foot-font" href="#!">Carlos</a>
-          </div>
-          <div class= "col s2">
-            <a class="right foot-font" href="#!">Cristian</a>
-          </div>
-          <div class= "col s2">
-            <a class="right foot-font" href="#!">Omar</a>
-          </div>
 
-        </div>
+    <footer class="page-footer">
+          <h1 align="center">E-RARIO</h1>
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5><a class="white-text" href="/Contacto">Contáctanos:</a></h5>
+                <p class="grey-text text-lighten-4">Dirección: C/ Avenida Marítima, nº14</p>
+                <p class="grey-text text-lighten-4">Teléfono: 922 50 52 44</p>
+                <p class="grey-text text-lighten-4">Email: E-rario_@gmail.com</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Redes sociales</h5>
+                <ul class="social">
+                 <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/e-rario/" class="insta" title="Instagram" data-aos="fade-up" data-aos-delay="20"><i class="fa fa-instagram"></i></a></li>
+                 <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/e-rario/" class="face" title="Facebook" data-aos="fade-up" data-aos-delay="40"><i class="fa fa-facebook"></i></a></li>
+                 <li><a class="grey-text text-lighten-3" href="https://twitter.com/e-rario" class="twit" title="Twitter" data-aos="fade-up" data-aos-delay="60"><i class="fa fa-twitter"></i></a></li>
+                 <li><a class="grey-text text-lighten-3" href="#" class="google" title="Google +" data-aos="fade-up" data-aos-delay="80"><i class="fa fa-google-plus"></i></a></li>
+                 <li><a class="grey-text text-lighten-3" href="#" class="linkedin" title="Linkedin" data-aos="fade-up" data-aos-delay="100"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright Text
+            </div>
+          </div>
+        </footer>
     </div>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/functions.js"></script>
+    <script src ="js/index.js"></script>
   </body>
 
 </html>

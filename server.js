@@ -53,8 +53,12 @@ app.get('/',function(req, res) {
     res.sendFile('cliente/index.html');
 });
 
-app.get('/LogIn-Out',function(req, res) {
-    res.sendFile(path.join(__dirname, 'cliente/Form.html'));
+app.get('/LogIn-Up',function(req, res) {
+    res.sendFile(path.join(__dirname, 'cliente/login.html'));
+});
+
+app.get('/Contacto',function(req, res) {
+    res.sendFile(path.join(__dirname, 'cliente/contacto.html'));
 });
 
 app.get('/content',auth,function(req, res) {
@@ -88,10 +92,12 @@ app.post('/LogIn', function(req, res) {
             res.redirect('/content')
           } else {
             console.log("Contraseña incorrecta");
+            res.redirect('/LogIn-Up')
           }
           }
          else {
            console.log("Usuario Incorrecto")
+           res.redirect('/LogIn-Up')
         }
       }
     })
