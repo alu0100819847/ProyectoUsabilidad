@@ -72,7 +72,7 @@ app.post('/LogIn', function(req, res) {
   console.log(req.body);
   if(!req.body.log_form_email || !req.body.log_form_pass){
     console.log("Campos vacios");
-    res.sendFile(path.join(__dirname, 'cliente/Form.html'));
+    res.sendFile(path.join(__dirname, 'cliente/login.html'));
   } else {
     console.log("pio")
     Usuarios.findOne({'Usuario.Email': req.body.log_form_email}, function (err, result) {
@@ -113,7 +113,7 @@ app.post('/Registrar', function(req, res) {
 
   if(!req.body.form_email || !req.body.form_password){
     console.log("Campos vacios");
-    res.sendFile(path.join(__dirname, 'cliente/Form.html'));
+    res.sendFile(path.join(__dirname, 'cliente/login.html'));
   } else {
     bd.registrar(req.body.form_user, req.body.form_email, req.body.form_password)
 
@@ -132,7 +132,7 @@ app.post('/Registrar', function(req, res) {
             }
           }
          else {
-           res.redirect('/LogIn-Out')
+           res.redirect('/LogIn-Up')
            console.log("Usuario Incorrecto")
         }
       }
