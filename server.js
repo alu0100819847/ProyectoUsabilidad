@@ -37,10 +37,10 @@ var auth = function(req, res, next) {
         if (req.session) {
           return next();
         } else {
-          return res.sendStatus(401);
+          return res.redirect('/LogIn-Up')
         }
       } else {
-        return res.sendStatus(401);
+        return res.redirect('/LogIn-Up')
       }
     }
   })
@@ -59,6 +59,11 @@ app.get('/LogIn-Up',function(req, res) {
 
 app.get('/Contacto',function(req, res) {
     res.sendFile(path.join(__dirname, 'cliente/contacto.html'));
+});
+
+app.get('/LogOut',function(req, res) {
+    req.session.destroy();
+    res.sendFile(path.join(__dirname, 'cliente/login.html'));
 });
 
 app.get('/content',auth,function(req, res) {
