@@ -10,6 +10,9 @@ var bcrypt   = require('bcrypt-nodejs');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.set('views', path.join(__dirname, 'cliente'));
+app.set('view engine', 'ejs');
+
 mongoose.connect('mongodb://localhost:27017/UyA2018', function(error){
   if (error) {
     throw error;
@@ -67,8 +70,39 @@ app.get('/LogOut',function(req, res) {
 });
 
 app.get('/content',auth,function(req, res) {
-    res.sendFile(path.join(__dirname, 'cliente/contenido.html'));
+
+    res.render('contenido', { /*user: req.session.user, evento: result , Fechas: Fechas*/})
+    //res.sendFile(path.join(__dirname, 'cliente/contenido.html'));
 });
+app.post('/createEvent', auth, function(req, res){
+
+  Usuarios.findOne({'Usuario.Email': req.session.identificador}, function (err, result) {
+    if (err) {
+      console.log(err);
+    } else {
+      if (result == null) {
+        console.log("Usuario inexistente");
+        res.redirect('/LogOut');
+        }
+       else {
+        console.log("Inserting event: "+req.body.form_asunto);
+        console.log("the day: "+req.body.form_day);
+        console.log("Email: "+ req.session.identificador);
+        evento = new Usuarios({'Usuario.Horario.Hinicio': req.body.form_day, 'Usuario.Horario.Asunto': req.body.form_asunto}, function (err, result) {
+          if (err) return handleError(err);
+        })
+
+        evento.save (function (err) {
+          if (err) console.log(err);;
+        })
+        res.redirect('/content');
+      }
+    }
+  })
+  Usuarios.where('Usuario.Nombre', /.*/).exec( function(err, result){
+    console.log("HOla: "+result);
+  })
+})
 
 app.post('/LogIn', function(req, res) {
   console.log("Pintando:")
@@ -152,5 +186,6 @@ app.post('/Registrar', function(req, res) {
 var server = app.listen( process.env.PORT || 8080, ()=> {
 var host = server.address().address
 var port = server.address().port
+console.log("Fecha: "+new Date())
 console.log('Conectado a: http://%s:%s', host, port);
 })
