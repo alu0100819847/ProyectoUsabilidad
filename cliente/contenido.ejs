@@ -10,11 +10,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title> E-Rario </title>
   <link rel="icon" href="img/logo.ico" type="image/x-icon">
-
  </head>
+<script>var Fecha =[]
+<% for(var i = 0; i < Fechas.length; i++){
+    %>Fecha[<%=i%>] = " <%=Fechas[i]%> "
 
+<%}%>
+var Asunto =[]
+<% for(var i = 0; i < Asuntos.length; i++){
+    %>Asunto[<%=i%>] = " <%=Asuntos[i]%> "
+
+<%}%></script>
   <body>
-
     <header>
       <nav>
         <div class="nav-wrapper">
@@ -56,20 +63,22 @@
               <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Crear</a>
             </div>
           </div>
-        <div class="row">
-          <div id="Lunes" class="col l1 slot center-align">
+        <div id="Lunes" class="row">
+          <div  class="col l1 day center-align">
             <div class= "DiaSemana">
               Lunes
             </div>
             <div class= "DiaMes">
-
             </div>
           </div>
 
+          <div class="Evento col s10">
+
+          </div>
 
         </div>
-        <div class="row">
-          <div id = "Martes" class="col l1 slot center-align">
+        <div id = "Martes" class="row">
+          <div class="col l1 day center-align">
             <div class= "DiaSemana">
               Martes
             </div>
@@ -77,12 +86,14 @@
 
             </div>
           </div>
+          <div class="Evento col s10">
 
+          </div>
 
 
         </div>
-        <div class="row">
-          <div id = "Miercoles" class="col l1 slot center-align">
+        <div id = "Miercoles" class="row">
+          <div class="col l1 day center-align">
             <div class= "DiaSemana">
               Miercoles
             </div>
@@ -90,11 +101,13 @@
 
             </div>
           </div>
+          <div class="Evento col s10">
 
+          </div>
         </div>
 
-        <div class="row">
-          <div id = "Jueves" class="col l1 slot center-align">
+        <div id = "Jueves" class="row">
+          <div class="col l1 day center-align">
             <div class= "DiaSemana">
             Jueves
             </div>
@@ -102,11 +115,13 @@
 
             </div>
           </div>
+          <div class="Evento col s10">
 
+          </div>
 
         </div>
-        <div class="row">
-          <div id = "Viernes" class="col l1 slot center-align">
+        <div id = "Viernes" class="row">
+          <div class="col l1 day center-align">
             <div class= "DiaSemana">
               Viernes
             </div>
@@ -114,11 +129,13 @@
 
             </div>
           </div>
+          <div class="Evento col s10">
 
+          </div>
 
         </div>
-        <div class="row">
-          <div id = "Sabado" class="col l1 slot center-align">
+        <div id = "Sabado" class="row">
+          <div class="col l1 day center-align">
             <div class= "DiaSemana">
               Sabado
             </div>
@@ -126,12 +143,14 @@
 
             </div>
           </div>
+          <div class="Evento col s10">
 
+          </div>
 
         </div>
 
-        <div class="row">
-          <div id = "Domingo" class="col l1 slot center-align">
+        <div id = "Domingo" class="row">
+          <div class="col l1 day center-align">
             <div class= "DiaSemana">
               Domingo
             </div>
@@ -139,7 +158,9 @@
 
             </div>
           </div>
+          <div class="Evento col s10">
 
+          </div>
         </div>
 
       </div>
@@ -161,7 +182,7 @@
                 <label for="reg_asunto">Asunto: </label>
             </div>
             <div class="input-field col s6">
-                <input id="reg_day" class="form-font" name="form_day" type="date" class="validate">
+                <input id="reg_day" class="form-font" name="form_day" type="datetime-local" class="validate">
                 <label for="reg_day"> </label>
             </div>
           </div>
@@ -173,7 +194,7 @@
         </div>
           <div class="row">
             <div class="col s8 offset-s4">
-              <button id="btn_reg" class="form-button rigth" type="submit">Crear</button>
+              <button id="btn_reg_event" class="modal-close form-button rigth" type="submit">Crear</button>
             </div>
           </div>
         </form>

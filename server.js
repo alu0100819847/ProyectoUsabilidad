@@ -31,13 +31,15 @@ var Usuarios = mongoose.model('UyA2018', schema);
 
 var auth = function(req, res, next) {
   console.log("autentificando")
+  console.log("Esta entrando: " +req.session.identificador);
   Usuarios.findOne({"Usuario.Email": req.session.identificador}, function (err, result) {
+    console.log("Petición en la autenticacion"+result)
     if (err) {
       console.log(err);
       res.send("ERROR");
     } else {
       if (result != null) {
-        if (req.session) {
+        if (req.session && req.session.identificador) {
           return next();
         } else {
           return res.redirect('/LogIn-Up')
@@ -70,12 +72,35 @@ app.get('/LogOut',function(req, res) {
 });
 
 app.get('/content',auth,function(req, res) {
+  Usuarios.find( {'Horario.Email': req.session.identificador }).sort({'Horario.Day': 1}).exec(function (err, result) {
+    if (err) {
+      console.log(err);
+    } else {
 
-    res.render('contenido', { /*user: req.session.user, evento: result , Fechas: Fechas*/})
+      if (result != null) {
+        var fecha = [];
+        var asunto= [];
+        for (var i = 0; i < result.length; i++){
+          fecha[i] = ""+result[i].Horario.Day + "";
+          asunto[i] = result[i].Horario.Asunto;
+        }
+        console.log("Buscando eventos: "+result)
+        console.log("Esta es la fecha "+fecha)
+        console.log("Este es el asunto "+ asunto)
+        res.render('contenido', { Fechas: fecha, Asuntos: asunto })
+        }
+       else {
+         res.render('contenido', { /*user: req.session.user, evento: result , Fechas: Fechas*/})
+          console.log("No hay eventos.")
+        }
+      }
+    })
+
     //res.sendFile(path.join(__dirname, 'cliente/contenido.html'));
 });
 app.post('/createEvent', auth, function(req, res){
 
+if(req.session.identificador == "") res.redirect('/LogIn-Up');
   Usuarios.findOne({'Usuario.Email': req.session.identificador}, function (err, result) {
     if (err) {
       console.log(err);
@@ -88,14 +113,17 @@ app.post('/createEvent', auth, function(req, res){
         console.log("Inserting event: "+req.body.form_asunto);
         console.log("the day: "+req.body.form_day);
         console.log("Email: "+ req.session.identificador);
-        evento = new Usuarios({'Usuario.Horario.Hinicio': req.body.form_day, 'Usuario.Horario.Asunto': req.body.form_asunto}, function (err, result) {
+
+
+        evento = new Usuarios({'Horario.Email': req.session.identificador,'Horario.Day': req.body.form_day, 'Horario.Asunto': req.body.form_asunto}, function (err, result) {
           if (err) return handleError(err);
         })
 
         evento.save (function (err) {
           if (err) console.log(err);;
         })
-        res.redirect('/content');
+
+        res.send("OK!!!");
       }
     }
   })
@@ -167,12 +195,11 @@ app.post('/Registrar', function(req, res) {
             req.session.admin = true;
 
             console.log("Usuario correcto");
-            res.redirect('/content')
+            res.redirect('/LogIn-Up')
             }
           }
          else {
            res.redirect('/LogIn-Up')
-           console.log("Usuario Incorrecto")
         }
       }
     })

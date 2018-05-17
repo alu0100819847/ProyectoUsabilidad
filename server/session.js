@@ -31,12 +31,19 @@ bd.registrar = function(user, email, pass){
 
 bd.print = function(){
   Usuarios.where('Usuario.Nombre', /.*/).exec( function(err, result){
-    console.log("HOla: "+result);
+    console.log("Usuario: "+result);
+  })
+  Usuarios.where('Horario.Email', /.*/).exec( function(err, result){
+    console.log("Eventos: "+result);
   })
 }
 
 bd.remove= function(nombre){
   console.log("Borrar: "+nombre)
     Usuarios.remove({ 'Usuario.Nombre': nombre}).exec();
+}
+bd.removeH= function(nombre){
+  console.log("Borrar: "+nombre)
+    Usuarios.remove({ 'Horario.Email': nombre}).exec();
 }
 module.exports = bd;

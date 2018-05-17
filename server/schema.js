@@ -10,18 +10,11 @@ var Schema = mongoose.Schema({
     Email               : String, //Identificador
     Nombre              : String,
     Password            : String,
-    Horario             : {
-      Day               : Number,
-      Hinicio           : Date,   //Identificador
-      Hfin              : Date,   //Identificador
+  },
+  Horario               : {
+      Day               : Date,
+      Email             : String,   //Identificador
       Asunto            : String
-    },
-    Notificacion        : {
-      Fecha             : Date,   //Identificador
-      Asunto            : String, //Identificador
-      Repeticiones      : Number,
-      Intervalo         : Number
-    },
   }
 /*
     local               : {

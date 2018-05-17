@@ -255,7 +255,7 @@ ul.social {
   background-color: #dcac8f70;
 }
 
-.slot{
+.day{
   background-color: white;
   min-height: 10px;
   min-width: 15%;
@@ -264,6 +264,20 @@ ul.social {
   padding-top: 10px !important;
 }
 
+.slot{
+  background-color: white;
+  min-height: 10px;
+  min-width: 15%;
+  border: 2px solid rgba(68, 68, 68, 0.555);
+  padding: 0px !important;
+  margin: 0 .75rem;
+}
+
 .modalFormtitle{
   font-size: 25px;
+}
+
+.hora {
+  background-color: #61595982;
+  border: 2px solid rgba(68, 68, 68, 0.555);
 }
