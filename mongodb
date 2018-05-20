@@ -1,4 +1,2 @@
 #!/bin/bash
-sudo mongod --dbpath=/data --port 27018
-# Usar el siguiente comando para c9
-# mongod --bind_ip=$IP --nojournal
+sudo mongod --dbpath=/data --nojournal --port 27017

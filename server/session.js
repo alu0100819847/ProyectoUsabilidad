@@ -4,7 +4,7 @@ var Usuarios = mongoose.model('UyA2018', Schema);
 var bcrypt   = require('bcrypt-nodejs');
 var bd = []
 
-bd.registrar = function(user, email, pass){
+bd.registrar = function(user, email, pass, res){
 
   Usuarios.findOne({'Usuario.Email': email}, function (err, result) {
     if (err) {

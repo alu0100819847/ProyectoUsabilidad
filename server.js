@@ -182,8 +182,7 @@ app.post('/Registrar', function(req, res) {
     console.log("Campos vacios");
     res.sendFile(path.join(__dirname, 'cliente/login.html'));
   } else {
-    bd.registrar(req.body.form_user, req.body.form_email, req.body.form_password)
-
+    bd.registrar(req.body.form_user, req.body.form_email, req.body.form_password)/*
     Usuarios.findOne({'Usuario.Email': req.body.form_email}, function (err, result) {
       if (err) {
         console.log(err);
@@ -202,10 +201,10 @@ app.post('/Registrar', function(req, res) {
            res.redirect('/LogIn-Up')
         }
       }
-    })
+    })*/
   }
-  bd.print();
-
+  //bd.print();
+  res.redirect('/LogIn-Up')
 
 });
 

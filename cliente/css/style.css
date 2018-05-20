@@ -101,7 +101,10 @@ ul.social {
 .cerrar{
     background-color: #852121;
 }
-
+  .cerrar:hover{
+    background-color: #333;
+    
+  }
 .page-footer{
     background-color: #333;
 }
@@ -204,7 +207,7 @@ ul.social {
 }
 
 .form-button {
-  background-color: #ff5b0aa8;
+  background-color: #852121;
   text-transform: uppercase;
   color: #fff;
   border: 0;
@@ -218,9 +221,15 @@ ul.social {
   cursor: pointer;
 }
 
+.form-button:hover {
+  background-color: white;
+  color:black;
+}
+
 .form-font {
   color:white;
 }
+
 .contenido {
   margin-bottom: 50px;
 }
@@ -243,7 +252,7 @@ ul.social {
 }
 
 .white-text:hover{
-  background-color: #86868663;
+  background-color: #8686866;
 }
 
 .working{
@@ -262,6 +271,12 @@ ul.social {
   border: 2px solid rgba(68, 68, 68, 0.555);
   padding-bottom: 10px !important;
   padding-top: 10px !important;
+  border-radius: 21px 21px 21px 21px;
+}
+
+.day:hover{
+  background-color: #333;
+  color:white;
 }
 
 .slot{
@@ -271,13 +286,30 @@ ul.social {
   border: 2px solid rgba(68, 68, 68, 0.555);
   padding: 0px !important;
   margin: 0 .75rem;
+  border-radius: 21px 21px 21px 21px;
 }
+
+.slot:hover{
+    background-color: #333;
+    color:white;
+  
+}
+.slot:hover .hora{
+    background-color: white;
+    color:#333;
+  
+}
+
 
 .modalFormtitle{
   font-size: 25px;
 }
 
 .hora {
-  background-color: #61595982;
-  border: 2px solid rgba(68, 68, 68, 0.555);
-}
+  background-color: #333;
+  color:white;
+  padding: 0px !important;
+  margin: 0 .75rem;
+  border-radius: 21px 21px 21px 21px;
+  }
+  
