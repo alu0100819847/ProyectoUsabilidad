@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.set('views', path.join(__dirname, 'cliente'));
 app.set('view engine', 'ejs');
 
-mongoose.connect('mongodb://user:pass@ds163034.mlab.com:63034/heroku_znc6h4lc', function(error){
+mongoose.connect('mongodb://user:pass@ds229690.mlab.com:29690/heroku_dtzjm7jz', function(error){
   if (error) {
     throw error;
   } else {
