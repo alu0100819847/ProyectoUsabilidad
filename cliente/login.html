@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
  <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -8,7 +8,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title> E-Rario </title>
+  <title>LogIn/Registrar - E-Rario </title>
   <link rel="icon" href="img/logo.ico" type="image/x-icon">
  </head>
 
@@ -19,27 +19,27 @@
       <nav>
         <div class="nav-wrapper">
 
-        <a id="logo-header" href="/">
-          <span class="site-name">E-RARIO</span>
+        <a id="logo-header" tabindex="1" alt="Home" href="/">
+          <span class="site-name" >E-RARIO</span>
         </a>
         <!-- / #logo-header -->
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons" lang="es">menu</i></a>
 
         <ul class="right hide-on-med-and-down">
 
           <ul class="right hide-on-med-and-down">
-            <li><a href="https://uyaull-e0414.firebaseapp.com/" onclick="return false">Chat</a></li>
-            <li><a href="/Contacto">Contacto</a></li>
-            <li><a class="cerrar" href="/content">Acceder</a></li>
+            <li><a href="https://uyaull-e0414.firebaseapp.com/" tabindex="2" onclick="return false" lang="es">Chat</a></li>
+            <li><a href="/Contacto" tabindex="3" lang="es">Contacto</a></li>
+            <li><a class="cerrar" href="/content" tabindex="4" lang="es">Acceder</a></li>
           </ul>
 
         </ul>
 
         <ul class="side-nav" id="mobile-demo">
 
-          <li><a href="https://uyaull-e0414.firebaseapp.com/" onclick="return false">Chat</a></li>
-          <li><a href="/Contacto">Contacto</a></li>
-          <li><a class="cerrar" href="/content">Acceder</a></li>
+          <li><a href="https://uyaull-e0414.firebaseapp.com/" onclick="return false" tabindex="-1" lang="es">Chat</a></li>
+          <li><a href="/Contacto" tabindex="-1" lang="es">Contacto</a></li>
+          <li><a class="cerrar" href="/content" tabindex="-1" lang="es">Acceder</a></li>
         <!-- Dropdown Trigger -->
         </ul>
 
@@ -55,7 +55,7 @@
         <div class="row">
           <div class="col s12 m8 l4">
             <div class="row">
-              <div class="form-title col s12 center-align">
+              <div class="form-title col s12 center-align" lang="es">
                 Registrar
               </div>
             </div>
@@ -65,27 +65,27 @@
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="reg_user" class="form-font" name="form_user" placeholder="Usuario" type="text" class="validate">
-                    <label for="reg_user">Usuario:</label>
+                    <input tabindex="5" id="reg_user" class="form-font" name="form_user" placeholder="Usuario" type="text" class="validate">
+                    <label for="reg_user" lang="es">Usuario:</label>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="reg_email" class="form-font" name="form_email" placeholder="micorreo@email.com" type="email" class="validate">
-                    <label for="reg_email">Email:</label>
+                    <input tabindex="6" id="reg_email" class="form-font" name="form_email" placeholder="micorreo@email.com" type="email" class="validate">
+                    <label for="reg_email" lang="es">Email:</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="reg_pass" class="form-font" name="form_password" placeholder="**********" type="password" class="validate">
-                    <label for="reg_pass">Contraseña:</label>
+                    <input tabindex="7" id="reg_pass" class="form-font" name="form_password" placeholder="**********" type="password" class="validate">
+                    <label for="reg_pass" lang="es">Contraseña:</label>
                   </div>
                 </div>
                   <div class="row">
                     <div class="input-field col s12">
-                    <input id="reg_pass_v2" class="form-font" placeholder="**********" type="password" class="validate" onchange="validate()">
-                    <label for="reg_pass_v2">Repetir Contraseña:</label>
+                    <input tabindex="8" id="reg_pass_v2" class="form-font" placeholder="**********" type="password" class="validate" onchange="validate()">
+                    <label for="reg_pass_v2" lang="es">Repetir Contraseña:</label>
                   </div>
                 </div>
                 <div class="row">
@@ -95,7 +95,7 @@
               </div>
                 <div class="row">
                   <div class="col s8 offset-s4">
-                    <button id="btn_reg" class="form-button rigth" type="submit">Registrar</button>
+                    <button tabindex="9" id="btn_reg" class="form-button rigth" type="submit" lang="es">Registrar</button>
                   </div>
                 </div>
               </form>
@@ -112,20 +112,20 @@
               <form class="" action="/LogIn" method="post">
                 <div class="row">
                   <div class="input-field col s12">
-                    <input class="form-font" name="log_form_email" class="form-font" placeholder="Email" id="log_email" type="email" class="validate">
-                    <label for="log_email">Email:</label>
+                    <input tabindex="10" class="form-font" name="log_form_email" class="form-font" placeholder="Email" id="log_email" type="email" class="validate">
+                    <label for="log_email" lang="es">Email:</label>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <input class="form-font" name="log_form_pass" placeholder="**********" id="log_pass" type="password" class="validate">
-                    <label for="log_pass">Contraseña:</label>
+                    <input tabindex="11" class="form-font" name="log_form_pass" placeholder="**********" id="log_pass" type="password" class="validate">
+                    <label for="log_pass" lang="es">Contraseña:</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col s8 offset-s4">
-                    <button type="submit" class="form-button rigth">Log-In</button>
+                    <button tabindex="12" type="submit" class="form-button rigth">Log-In</button>
                   </div>
                 </div>
               </form>
@@ -138,23 +138,23 @@
     </div>
 
     <footer class="page-footer">
-                 <h1 align="center">E-RARIO</h1>
+        <h1 align="center" lang="es">E-RARIO</h1>
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5><a class="white-text" href="/Contacto">Contáctanos:</a></h5>
-                <p class="grey-text text-lighten-4">Dirección: C/ Avenida Marítima, nº14</p>
-                <p class="grey-text text-lighten-4">Teléfono: 922 50 52 44</p>
-                <p class="grey-text text-lighten-4">Email: E-rario_@gmail.com</p>
+                <h5><a tabindex="13" class="white-text" href="/Contacto" lang="es">Contáctanos:</a></h5>
+                <p class="grey-text text-lighten-4" lang="es">Dirección: C/ Avenida Marítima, nº14</p>
+                <p class="grey-text text-lighten-4" lang="es">Teléfono: 922 50 52 44</p>
+                <p class="grey-text text-lighten-4" lang="es">Email: E-rario_@gmail.com</p>
               </div>
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Redes sociales</h5>
+                <h5 class="white-text" lang="es">Redes sociales</h5>
                 <ul class="social">
-                 <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/e-rario/" class="insta" title="Instagram" data-aos="fade-up" data-aos-delay="20"><i class="fa fa-instagram"></i></a></li>
-                 <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/e-rario/" class="face" title="Facebook" data-aos="fade-up" data-aos-delay="40"><i class="fa fa-facebook"></i></a></li>
-                 <li><a class="grey-text text-lighten-3" href="https://twitter.com/e-rario" class="twit" title="Twitter" data-aos="fade-up" data-aos-delay="60"><i class="fa fa-twitter"></i></a></li>
-                 <li><a class="grey-text text-lighten-3" href="#" class="google" title="Google +" data-aos="fade-up" data-aos-delay="80"><i class="fa fa-google-plus"></i></a></li>
-                 <li><a class="grey-text text-lighten-3" href="#" class="linkedin" title="Linkedin" data-aos="fade-up" data-aos-delay="100"><i class="fa fa-linkedin"></i></a></li>
+                 <li><a tabindex="14" class="grey-text text-lighten-3" href="https://www.instagram.com/e-rario/" class="insta" title="Instagram" data-aos="fade-up" data-aos-delay="20"><i class="fa fa-instagram"></i></a></li>
+                 <li><a tabindex="15" class="grey-text text-lighten-3" href="https://www.facebook.com/e-rario/" class="face" title="Facebook" data-aos="fade-up" data-aos-delay="40"><i class="fa fa-facebook"></i></a></li>
+                 <li><a tabindex="16" class="grey-text text-lighten-3" href="https://twitter.com/e-rario" class="twit" title="Twitter" data-aos="fade-up" data-aos-delay="60"><i class="fa fa-twitter"></i></a></li>
+                 <li><a tabindex="17" class="grey-text text-lighten-3" href="#" class="google" title="Google +" data-aos="fade-up" data-aos-delay="80"><i class="fa fa-google-plus"></i></a></li>
+                 <li><a tabindex="18" class="grey-text text-lighten-3" href="#" class="linkedin" title="Linkedin" data-aos="fade-up" data-aos-delay="100"><i class="fa fa-linkedin"></i></a></li>
                 </ul>
               </div>
             </div>
