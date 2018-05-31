@@ -13,11 +13,11 @@ Este repositorio va dirigido al proyecto final de la asignatura Usabilidad y Acc
   [Enlace](https://e-rario.herokuapp.com/)
 
 ## Como desplegarlo.
-
-  * git clone git@github.com:alu0100819847/ProyectoUsabilidad.git
-  * npm install
-  * node server.js
-
+~~~
+  git clone git@github.com:alu0100819847/ProyectoUsabilidad.git
+  npm install
+  node server.js
+~~~
 ## Instalar MongoDB
 
 sudo apt-get install -y mongodb-org
